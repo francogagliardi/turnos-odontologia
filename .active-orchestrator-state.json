@@ -1,1 +1,175 @@
-{"discovery": {"casos_de_uso": ["Paciente reserva online sin llamar", "Paciente reprograma/cancela respetando anticipación mínima", "Paciente recibe recordatorio", "Recepcionista gestiona agenda diaria por profesional", "Odontólogo ve su agenda y registra prestación en ficha"], "competitors": [{"name": "AgendaPro", "notes_file": "discovery/sources/agendapro.md"}, {"name": "Clinic Cloud", "notes_file": "discovery/sources/clinic-cloud.md"}, {"name": "Dentalink", "notes_file": "discovery/sources/dentalink.md"}, {"name": "Dentidesk", "notes_file": "discovery/sources/dentidesk.md"}, {"name": "DentalSoft", "notes_file": "discovery/sources/dentalsoft.md"}, {"name": "DentiClick", "notes_file": "discovery/sources/denticlick.md"}, {"name": "Denticon", "notes_file": "discovery/sources/denticon.md"}, {"name": "Dentiqa", "notes_file": "discovery/sources/dentiqa.md"}, {"name": "DoctoCliq", "notes_file": "discovery/sources/doctocliq.md"}, {"name": "Doctoralia", "notes_file": "discovery/sources/doctoralia.md"}, {"name": "Fresha", "notes_file": "discovery/sources/fresha.md"}, {"name": "Gesden", "notes_file": "discovery/sources/gesden.md"}, {"name": "Nubimed", "notes_file": "discovery/sources/nubimed.md"}, {"name": "OdontoSys", "notes_file": "discovery/sources/odontosys.md"}, {"name": "Open Dental", "notes_file": "discovery/sources/open-dental.md"}, {"name": "SomosDento", "notes_file": "discovery/sources/somosdento.md"}, {"name": "tab32", "notes_file": "discovery/sources/tab32.md"}], "created_by": "discovery-research", "funcionalidades_necesarias": ["Agenda multi-profesional y multi-sillón", "Reserva online simple", "Recordatorios propios (email/push, sin proveedores externos)", "Ficha básica con odontograma mínimo", "Roles y permisos"], "funcionalidades_opcionales": ["Pagos y señas online", "WhatsApp Business API", "Obras sociales y prepagas", "Reportes avanzados", "Laboratorio protésico"], "integraciones": ["Ninguna externa en v1"], "owner": "active-orchestrator", "preguntas_abiertas": ["Alcance exacto del odontograma mínimo", "Push propio: solo email o también web push", "Lista de espera: aviso de hueco libre"], "problema": "Consultorios odontológicos chicos pierden turnos y tiempo por gestión manual; necesitan agenda digital con reserva online y recordatorios", "reglas_de_negocio": ["Sin solapamientos", "Sin sobreturnos", "Cancelación con >=48h", "Reserva con >=72h de anticipación", "Duración variable por prestación"], "restricciones": ["Stack Python+FastAPI+SQLite, front Jinja+HTMX", "Multi-profesional escalable (datos desacoplados, migrables a Postgres)", "Sin plazo de entrega"], "riesgos": ["Pacientes prefieran WhatsApp por costumbre (sin validar)", "Descontrol de alcance (mitigado con corte v1)", "Tensión SQLite vs escalable (mitigada con ORM+migraciones)", "Alcance del odontograma mínimo sin definir"], "sources": ["https://agendapro.com/es/dental/software-odontologico", "https://clinic-cloud.com/tarifas", "https://dentalsoft.com.ar/", "https://dentiqa.app/ar", "https://odontosys.com/index.html", "https://pro.doctoralia.com/ar", "https://somosdento.com/", "https://tab32.com/pricing", "https://www.denticlick.app/", "https://www.dentidesk.com/dentidesk", "https://www.doctocliq.com/", "https://www.fresha.com/pricing", "https://www.infomedsoftware.com/software/gesden-", "https://www.nubimed.com/software-clinica-dental", "https://www.opendental.com/", "https://www.planetdds.com/denticon/", "https://www.softwaredentalink.com/es/planes"], "usuarios": ["Paciente", "Recepcionista", "Odontólogo"]}, "step": "discovery", "version": 4}
+{
+  "discovery": {
+    "casos_de_uso": [
+      "Paciente reserva online sin llamar",
+      "Paciente reprograma/cancela respetando anticipaciÃ³n mÃ­nima",
+      "Paciente recibe recordatorio",
+      "Recepcionista gestiona agenda diaria por profesional",
+      "OdontÃ³logo ve su agenda y registra prestaciÃ³n en ficha"
+    ],
+    "competitors": [
+      {
+        "name": "AgendaPro",
+        "notes_file": "discovery/sources/agendapro.md"
+      },
+      {
+        "name": "Clinic Cloud",
+        "notes_file": "discovery/sources/clinic-cloud.md"
+      },
+      {
+        "name": "Dentalink",
+        "notes_file": "discovery/sources/dentalink.md"
+      },
+      {
+        "name": "Dentidesk",
+        "notes_file": "discovery/sources/dentidesk.md"
+      },
+      {
+        "name": "DentalSoft",
+        "notes_file": "discovery/sources/dentalsoft.md"
+      },
+      {
+        "name": "DentiClick",
+        "notes_file": "discovery/sources/denticlick.md"
+      },
+      {
+        "name": "Denticon",
+        "notes_file": "discovery/sources/denticon.md"
+      },
+      {
+        "name": "Dentiqa",
+        "notes_file": "discovery/sources/dentiqa.md"
+      },
+      {
+        "name": "DoctoCliq",
+        "notes_file": "discovery/sources/doctocliq.md"
+      },
+      {
+        "name": "Doctoralia",
+        "notes_file": "discovery/sources/doctoralia.md"
+      },
+      {
+        "name": "Fresha",
+        "notes_file": "discovery/sources/fresha.md"
+      },
+      {
+        "name": "Gesden",
+        "notes_file": "discovery/sources/gesden.md"
+      },
+      {
+        "name": "Nubimed",
+        "notes_file": "discovery/sources/nubimed.md"
+      },
+      {
+        "name": "OdontoSys",
+        "notes_file": "discovery/sources/odontosys.md"
+      },
+      {
+        "name": "Open Dental",
+        "notes_file": "discovery/sources/open-dental.md"
+      },
+      {
+        "name": "SomosDento",
+        "notes_file": "discovery/sources/somosdento.md"
+      },
+      {
+        "name": "tab32",
+        "notes_file": "discovery/sources/tab32.md"
+      }
+    ],
+    "created_by": "discovery-research",
+    "funcionalidades_necesarias": [
+      "Agenda multi-profesional y multi-sillÃ³n",
+      "Reserva online simple",
+      "Recordatorios propios (email/push, sin proveedores externos)",
+      "Ficha bÃ¡sica con odontograma mÃ­nimo",
+      "Roles y permisos"
+    ],
+    "funcionalidades_opcionales": [
+      "Pagos y seÃ±as online",
+      "WhatsApp Business API",
+      "Obras sociales y prepagas",
+      "Reportes avanzados",
+      "Laboratorio protÃ©sico"
+    ],
+    "integraciones": [
+      "Ninguna externa en v1"
+    ],
+    "owner": "active-orchestrator",
+    "preguntas_abiertas": [
+      "Alcance exacto del odontograma mÃ­nimo",
+      "Push propio: solo email o tambiÃ©n web push",
+      "Lista de espera: aviso de hueco libre"
+    ],
+    "problema": "Consultorios odontolÃ³gicos chicos pierden turnos y tiempo por gestiÃ³n manual; necesitan agenda digital con reserva online y recordatorios",
+    "reglas_de_negocio": [
+      "Sin solapamientos",
+      "Sin sobreturnos",
+      "CancelaciÃ³n con >=48h",
+      "Reserva con >=72h de anticipaciÃ³n",
+      "DuraciÃ³n variable por prestaciÃ³n"
+    ],
+    "restricciones": [
+      "Stack Python+FastAPI+SQLite, front Jinja+HTMX",
+      "Multi-profesional escalable (datos desacoplados, migrables a Postgres)",
+      "Sin plazo de entrega"
+    ],
+    "riesgos": [
+      "Pacientes prefieran WhatsApp por costumbre (sin validar)",
+      "Descontrol de alcance (mitigado con corte v1)",
+      "TensiÃ³n SQLite vs escalable (mitigada con ORM+migraciones)",
+      "Alcance del odontograma mÃ­nimo sin definir"
+    ],
+    "sources": [
+      "https://agendapro.com/es/dental/software-odontologico",
+      "https://clinic-cloud.com/tarifas",
+      "https://dentalsoft.com.ar/",
+      "https://dentiqa.app/ar",
+      "https://odontosys.com/index.html",
+      "https://pro.doctoralia.com/ar",
+      "https://somosdento.com/",
+      "https://tab32.com/pricing",
+      "https://www.denticlick.app/",
+      "https://www.dentidesk.com/dentidesk",
+      "https://www.doctocliq.com/",
+      "https://www.fresha.com/pricing",
+      "https://www.infomedsoftware.com/software/gesden-",
+      "https://www.nubimed.com/software-clinica-dental",
+      "https://www.opendental.com/",
+      "https://www.planetdds.com/denticon/",
+      "https://www.softwaredentalink.com/es/planes"
+    ],
+    "usuarios": [
+      "Paciente",
+      "Recepcionista",
+      "OdontÃ³logo"
+    ]
+  },
+  "step": "kb",
+  "version": 4,
+  "kb": {
+    "created_by": "kb-creator",
+    "source": "interactive",
+    "discovery": {
+      "problem": "Consultorios odontologicos chicos pierden turnos y tiempo por gestion manual; necesitan agenda digital con reserva online y recordatorios",
+      "system_type": "web_app",
+      "domain": "odontologia",
+      "scale": "team",
+      "stack": "Python + FastAPI + SQLite + Jinja + HTMX",
+      "needs_infra": true
+    },
+    "files": [
+      "knowledge-base/01_vision_y_objetivos.md",
+      "knowledge-base/02_descripcion_general.md",
+      "knowledge-base/03_actores_y_roles.md",
+      "knowledge-base/04_modelo_de_datos.md",
+      "knowledge-base/05_reglas_de_negocio.md",
+      "knowledge-base/06_funcionalidades.md",
+      "knowledge-base/07_flujos_principales.md",
+      "knowledge-base/08_arquitectura_propuesta.md",
+      "knowledge-base/09_decisiones_y_supuestos.md",
+      "knowledge-base/10_preguntas_abiertas.md",
+      "knowledge-base/README.md"
+    ]
+  }
+}
