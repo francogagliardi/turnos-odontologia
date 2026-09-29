@@ -145,7 +145,7 @@
       "Odontólogo"
     ]
   },
-  "step": "agents",
+  "step": "done",
   "version": 4,
   "kb": {
     "created_by": "kb-creator",
