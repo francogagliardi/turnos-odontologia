@@ -145,7 +145,7 @@
       "Odontólogo"
     ]
   },
-  "step": "find-skill",
+  "step": "registry",
   "version": 4,
   "kb": {
     "created_by": "kb-creator",
@@ -288,5 +288,27 @@
       "code-review",
       "async-python-patterns"
     ]
+  },
+  "registry": {
+    "created_by": "skill-registry",
+    "location": ".atl/skill-registry.md",
+    "skills_count": 12,
+    "skills": [
+      "fastapi-python",
+      "python-testing-patterns",
+      "tdd",
+      "sql-optimization-patterns",
+      "frontend-design",
+      "playwright-best-practices",
+      "python-design-patterns",
+      "code-review",
+      "async-python-patterns",
+      "supabase-postgres-best-practices",
+      "postgresql-table-design",
+      "security-and-hardening"
+    ],
+    "conventions": [],
+    "conventions_note": "CLAUDE.md/AGENTS.md aun no existen (los genera agent-instruction)",
+    "engram": "saved"
   }
 }
