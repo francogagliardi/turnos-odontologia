@@ -145,7 +145,7 @@
       "Odontólogo"
     ]
   },
-  "step": "registry",
+  "step": "agents",
   "version": 4,
   "kb": {
     "created_by": "kb-creator",
@@ -310,5 +310,24 @@
     "conventions": [],
     "conventions_note": "CLAUDE.md/AGENTS.md aun no existen (los genera agent-instruction)",
     "engram": "saved"
+  },
+  "agents": {
+    "created_by": "agent-instruction",
+    "files": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "reglas_applied": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9",
+      "R10"
+    ]
   }
 }
