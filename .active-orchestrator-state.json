@@ -2,10 +2,10 @@
   "discovery": {
     "casos_de_uso": [
       "Paciente reserva online sin llamar",
-      "Paciente reprograma/cancela respetando anticipaciÃ³n mÃ­nima",
+      "Paciente reprograma/cancela respetando anticipación mínima",
       "Paciente recibe recordatorio",
       "Recepcionista gestiona agenda diaria por profesional",
-      "OdontÃ³logo ve su agenda y registra prestaciÃ³n en ficha"
+      "Odontólogo ve su agenda y registra prestación en ficha"
     ],
     "competitors": [
       {
@@ -79,35 +79,35 @@
     ],
     "created_by": "discovery-research",
     "funcionalidades_necesarias": [
-      "Agenda multi-profesional y multi-sillÃ³n",
+      "Agenda multi-profesional y multi-sillón",
       "Reserva online simple",
       "Recordatorios propios (email/push, sin proveedores externos)",
-      "Ficha bÃ¡sica con odontograma mÃ­nimo",
+      "Ficha básica con odontograma mínimo",
       "Roles y permisos"
     ],
     "funcionalidades_opcionales": [
-      "Pagos y seÃ±as online",
+      "Pagos y señas online",
       "WhatsApp Business API",
       "Obras sociales y prepagas",
       "Reportes avanzados",
-      "Laboratorio protÃ©sico"
+      "Laboratorio protésico"
     ],
     "integraciones": [
       "Ninguna externa en v1"
     ],
     "owner": "active-orchestrator",
     "preguntas_abiertas": [
-      "Alcance exacto del odontograma mÃ­nimo",
-      "Push propio: solo email o tambiÃ©n web push",
+      "Alcance exacto del odontograma mínimo",
+      "Push propio: solo email o también web push",
       "Lista de espera: aviso de hueco libre"
     ],
-    "problema": "Consultorios odontolÃ³gicos chicos pierden turnos y tiempo por gestiÃ³n manual; necesitan agenda digital con reserva online y recordatorios",
+    "problema": "Consultorios odontológicos chicos pierden turnos y tiempo por gestión manual; necesitan agenda digital con reserva online y recordatorios",
     "reglas_de_negocio": [
       "Sin solapamientos",
       "Sin sobreturnos",
-      "CancelaciÃ³n con >=48h",
-      "Reserva con >=72h de anticipaciÃ³n",
-      "DuraciÃ³n variable por prestaciÃ³n"
+      "Cancelación con >=48h",
+      "Reserva con >=72h de anticipación",
+      "Duración variable por prestación"
     ],
     "restricciones": [
       "Stack Python+FastAPI+SQLite, front Jinja+HTMX",
@@ -117,8 +117,8 @@
     "riesgos": [
       "Pacientes prefieran WhatsApp por costumbre (sin validar)",
       "Descontrol de alcance (mitigado con corte v1)",
-      "TensiÃ³n SQLite vs escalable (mitigada con ORM+migraciones)",
-      "Alcance del odontograma mÃ­nimo sin definir"
+      "Tensión SQLite vs escalable (mitigada con ORM+migraciones)",
+      "Alcance del odontograma mínimo sin definir"
     ],
     "sources": [
       "https://agendapro.com/es/dental/software-odontologico",
@@ -142,10 +142,10 @@
     "usuarios": [
       "Paciente",
       "Recepcionista",
-      "OdontÃ³logo"
+      "Odontólogo"
     ]
   },
-  "step": "kb",
+  "step": "roadmap",
   "version": 4,
   "kb": {
     "created_by": "kb-creator",
